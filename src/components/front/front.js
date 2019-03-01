@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './front.css'
 import Button from '../UI/Button/Button';
 import Spinner from '../UI/Spinner/Spinner';
 //import classes from './eligibility.css';
