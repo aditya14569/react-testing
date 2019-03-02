@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import {withRouter} from 'react-router-dom';
 // import Button from '../UI/Button/Button';
 import Spinner from '../UI/Spinner/Spinner';
 import './front.css';
@@ -59,6 +60,7 @@ class Front extends Component {
                     this.setState({ loading: false });
                     // this.props.history.push('/');
                     localStorage.setItem("token",response.headers["x-auth"]);
+                    this.props.history.push("/");
                     // const auth=localStorage.getItem("token");
                     // console.log(response.headers["x-auth"]);
                     // console.log(auth);
@@ -121,6 +123,7 @@ class Front extends Component {
     }
 
     render() {
+        localStorage.removeItem("token");
         const formElementsArray = [];
         for (let key in this.state.orderForm) {
             formElementsArray.push({
@@ -141,7 +144,8 @@ class Front extends Component {
                         touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
-                <Button variant="success" disabled={!this.state.formIsValid}>Log In</Button>
+                {/* <Button clicked={this.orderHandler} className="" variant="success" disabled={!this.state.formIsValid}>Log In</Button> */}
+                <button type="submit">Log In</button>
             </form>
         );
         if (this.state.loading) {

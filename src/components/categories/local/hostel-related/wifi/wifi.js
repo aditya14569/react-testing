@@ -144,7 +144,7 @@ class Eligibility extends Component {
       problemarea: formData.problemarea,
       needforreplacement: formData.needforreplacement,
       availability: formData.availability,
-      attached_documents: formData.attached_documents
+     // attached_documents: formData.attached_documents
     };
     axios
       .post("https://jsonplaceholder.typicode.com/posts", data)

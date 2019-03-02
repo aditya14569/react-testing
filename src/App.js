@@ -3,7 +3,8 @@ import Layout from './components/layout';
 import Front from '../src/components/front/front';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+import Auxillary from '../src/hoc/Auxillary';
+import {BrowserRouter, Route, Switch, Redirect,Link} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -36,32 +37,29 @@ class App extends Component {
   // }
   render() {
     
-    console.log(window.error);
-    if(this.state.error)
-     return (
-     <Front/>
-     );
-    else 
-      return (
-     <BrowserRouter> 
-     <div className="App">
-        {/* <Front /> */}
-        <div className='navbar fixed-top'>
-          <div className='brand'>
-            <img
-              alt=""
-              src="/logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />
-            {'Effective Complaint Management System'}
-          </div>
-          <Button variant="danger" size="sm" >Log Out</Button>
-        </div>
-        <Layout />
-      </div></BrowserRouter>
-    // <Front />
+    // console.log(window.error);
+    // if(this.state.error)
+    //  return (
+    // //  <Route path='/login' component={Front}/>
+    // <Front /> 
+    // );
+    // else 
+    //   return (
+    //  <BrowserRouter> 
+    //  <div className="App">
+    //     {/* <Front /> */}
+        
+    //     <Layout />
+    //   </div></BrowserRouter>
+    // // <Front />
+    // );
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login" component={Front} />
+          <Route path="/" component={Layout} />
+        </Switch>
+      </BrowserRouter>
     );
     
   }
