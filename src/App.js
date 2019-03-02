@@ -48,7 +48,9 @@ class App extends Component {
         <button >Log Out</button>
         <Layout />
       </div></BrowserRouter>
+    // <Front />
     );
+    
   }
 }
 

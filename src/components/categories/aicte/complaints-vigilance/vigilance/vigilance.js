@@ -80,7 +80,7 @@ class Eligibility extends Component {
             },
 
             grievance_description: {
-                elementType: 'select',
+                elementType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: 'grievance description'
