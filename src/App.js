@@ -42,14 +42,15 @@ class App extends Component {
      );
     else 
       return (
-    //  <BrowserRouter> 
-    //  <div className="App">
-    //     {/* <Front /> */}
-    //     <button >Log Out</button>
-    //     <Layout />
-    //   </div></BrowserRouter>
-    <Front />
+     <BrowserRouter> 
+     <div className="App">
+        {/* <Front /> */}
+        <button >Log Out</button>
+        <Layout />
+      </div></BrowserRouter>
+    // <Front />
     );
+    
   }
 }
 
