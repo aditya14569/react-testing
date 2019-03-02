@@ -73,30 +73,28 @@ class Eligibility extends Component {
         validation: {}
       },
       manpowerrequired: {
-        elementType: "input",
+        elementType: "select",
         elementConfig: {
-          type: "text",
-          placeholder: "man power required"
+          options: [
+            { value: "Yes", displayValue: "Yes" },
+            { value: "No", displayValue: "No" }
+          ]
         },
-        value: "",
-        validation: {
-          required: true
-        },
-        valid: false,
-        touched: false
+        value: "Yes",
+        valid: true,
+        validation: {}
       },
       machinery: {
-        elementType: "input",
+        elementType: "select",
         elementConfig: {
-          type: "text",
-          placeholder: "machinery"
+          options: [
+            { value: "Yes", displayValue: "Yes" },
+            { value: "No", displayValue: "No" }
+          ]
         },
-        value: "",
-        validation: {
-          required: true
-        },
-        valid: false,
-        touched: false
+        value: "Yes",
+        valid: true,
+        validation: {}
       },
 
       grievance_description: {
