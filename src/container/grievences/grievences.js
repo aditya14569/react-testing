@@ -39,10 +39,10 @@ class Grievence extends Component{
                 status= {data["status"]}
                 subcategoryId={data["subcategoryId"]}
                 subject={data["subject"]}
-                time1= {data["time1"]}
-                time2={data["time2"]}
-                time3= {data["time3"]}
-                timeOF= {data["timeOF"]}
+                // time1= {data["time1"]}
+                // time2={data["time2"]}
+                // time3= {data["time3"]}
+                // timeOF= {data["timeOF"]}
                 timeTillEscalation= {data["timeTillEscalation"]}
                 updatedAt= {data["updatedAt"]}
                 userId= {data["uerId"]} />
