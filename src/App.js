@@ -18,20 +18,21 @@ class App extends Component {
   authFailHandler() {
     this.setState({authenticated: !this.state.authenticated});
   }
-  componentDidMount() {
-    axios.get('https://sih-ecms-server.herokuapp.com/student/grievances/true', {
-      headers: {
-        "x-auth": localStorage.getItem("token")
-      }
-    })
-      .then(response => {
-        console.log(response)
-      })
-      .catch(err => {
-        this.setState({ error: true });
-        console.log(err);
-      });
-  }
+  // componentDidMount() {
+  //   axios.get('https://sih-ecms-server.herokuapp.com/student/grievances/true', {
+  //     headers: {
+  //       "x-auth": localStorage.getItem("token")
+  //     }
+  //   })
+  //     .then(response => {
+  //       console.log("hey")
+  //       console.log(response)
+  //     })
+  //     .catch(err => {
+  //       this.setState({ error: true });
+  //       console.log(err);
+  //     });
+  // }
   render() {
     
     console.log(window.error);
