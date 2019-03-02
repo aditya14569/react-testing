@@ -36,20 +36,17 @@ class Eligibility extends Component {
                 touched: false
             },
             hostel: {
-                elementType: 'input',
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'hostel'
+                    options: [
+                        { value: 'I', displayValue: 'I' },
+                        { value: 'A', displayValue: 'A' },
+                    {value:'J',displayValue:'J'}]
+
                 },
-                value: '',
-                validation: {
-                    required: true,
-                    minLength: 5,
-                    maxLength: 5,
-                    isNumeric: true
-                },
-                valid: false,
-                touched: false
+                value: 'need-to-order',
+                valid: true,
+                validation: {}
             },
             transactionmode: {
                 elementType: 'input',

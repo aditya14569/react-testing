@@ -38,59 +38,63 @@ class Eligibility extends Component {
             current_marks: {
                 elementType: 'input',
                 elementConfig: {
-                    type: 'text',
+                    type: 'numeric',
                     placeholder: 'current marks'
                 },
                 value: '',
                 validation: {
                     required: true,
-                    minLength: 5,
-                    maxLength: 5,
+                   
                     isNumeric: true
                 },
                 valid: false,
                 touched: false
             },
             applied_course: {
-                elementType: 'input',
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'applied course'
-                },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
-            },
-            priority_category: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'priority category'
-                },
-                value: '',
-                validation: {
-                    required: true,
+                    options: [
+                        { value: 'ENC', displayValue: 'ENC' },
+                        { value: 'COE', displayValue: 'COE' },
+                    {value:'BIOTECH',display:'BIOTECH'},
+                {value:'CIVIL',display:'CIVIL'},
+                {value:'MEE',display:'MEE'},
+                {value:'ELEC',display:'ELEC'},
+                {value:'CHEM',display:'CHEM'}
+            
+            ]
 
                 },
-                valid: false,
-                touched: false
+                value: 'ENC',
+                valid: true,
+                validation: {}
             },
-            ifsc: {
-                elementType: 'input',
+            scholarship_category: {
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'ifsc'
-                },
-                value: '',
-                validation: {
-                    required: true,
+                    options: [
+                        {value: '1', displayValue: '1' },
+                        {value: '2', displayValue: '2' },
+                        {value:'3',displayValue:'3'},
+                        {value:'4',displayValue:'4'}]
 
                 },
-                valid: false,
-                touched: false
+                value: '1',
+                valid: true,
+                validation: {}
+            },
+            bank: {
+                elementType: 'select',
+                elementConfig: {
+                    options: [
+                        { value: 'HDFC', displayValue: 'HDFC' },
+                        { value: 'ICICI', displayValue: 'ICICI' },
+                    {value:'SBI',displayValue:'SBI'}]
+
+                },
+                value: 'HDFC',
+                valid: true,
+                validation: {}
             },
             account_number: {
                 elementType: 'input',
@@ -107,51 +111,45 @@ class Eligibility extends Component {
                 touched: false
             },
             money_released: {
-                elementType: 'input',
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'money_released'
-                },
-                value: '',
-                validation: {
-                    required: true,
+                    options: [
+                        { value: 'yes', displayValue: 'yes' },
+                        { value: 'no', displayValue: 'no' }]
 
                 },
-                valid: false,
-                touched: false
+                value: 'yes',
+                valid: true,
+                validation: {}
             },
             money_transferred: {
-                elementType: 'input',
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'money_transferred'
-                },
-                value: '',
-                validation: {
-                    required: true,
+                    options: [
+                        { value: 'yes', displayValue: 'yes' },
+                        { value: 'no', displayValue: 'no' }]
 
                 },
-                valid: false,
-                touched: false
+                value: 'yes',
+                valid: true,
+                validation: {}
             },
-            month_of_scholarship: {
-                elementType: 'input',
+            year_of_scholarship: {
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'month of scholarship'
-                },
-                value: '',
-                validation: {
-                    required: true,
+                    options: [
+                        { value: '2019', displayValue: '2019' },
+                        { value: '2018', displayValue: '2018' }]
 
                 },
-                valid: false,
-                touched: false
+                value: '2019',
+                valid: true,
+                validation: {}
             },
 
 
             grievance_description: {
-                elementType: 'select',
+                elementType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: 'grievance description'
@@ -219,7 +217,7 @@ class Eligibility extends Component {
             account_number:formData.account_number,
             applied_course:formData.applied_course,
             current_marks:formData.current_marks,
-            priority_category:formData.priority_category,
+            scholarship_category:formData.scholarship_category,
             money_released:formData.money_released,
             money_transferred:formData.money_transferred,
             month_of_scholarship:formData.month_of_scholarship,

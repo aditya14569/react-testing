@@ -61,18 +61,18 @@ class Eligibility extends Component {
                 valid: false,
                 touched: false
             },
-            ifsc: {
-                elementType: 'input',
+            bank: {
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'ifsc code'
+                    options: [
+                        { value: 'SBI', displayValue: 'SBI' },
+                        { value: 'ICICI', displayValue: 'ICICI' },
+                    {value:'HDFC',displayValue:'HDFC'}]
+
                 },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
+                value: 'need-to-order',
+                valid: true,
+                validation: {}
             },
             account_number: {
                 elementType: 'input',

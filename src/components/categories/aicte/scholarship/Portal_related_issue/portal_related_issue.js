@@ -36,37 +36,32 @@ class Eligibility extends Component {
                 touched: false
             },
             area_screen_of_error: {
-                elementType: 'input',
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'current marks'
+                    options: [
+                        { value: 'DashBoard', displayValue: 'DashBoard' },
+                        { value: 'Login', displayValue: 'Login' }]
+
                 },
-                value: '',
-                validation: {
-                    required: true,
-                    minLength: 5,
-                    maxLength: 5,
-                    isNumeric: true
-                },
-                valid: false,
-                touched: false
+                value: 'Login',
+                valid: true,
+                validation: {}
             },
             degree_of_error: {
-                elementType: 'input',
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'applied course'
+                    options: [
+                        { value: 'Low', displayValue: 'Low' },
+                        { value: 'Moderate', displayValue: 'Moderate' }]
+
                 },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
+                value: 'Low',
+                valid: true,
+                validation: {}
             },
            
             grievance_description: {
-                elementType: 'select',
+                elementType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: 'grievance description'
