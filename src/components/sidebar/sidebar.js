@@ -14,7 +14,7 @@ const sidebar = (props) => {
 
                     <nav id="mainnav">
                         <ul>
-                            <li><NavLink to="/" exact activeClassName="selected-item">Open Grievences</NavLink></li> 
+                            <li><NavLink to="/grievence" exact activeClassName="selected-item">Open Grievences</NavLink></li> 
                             <li><NavLink to="/closedgrievence" exact activeClassName="selected-item">Closed Grievences</NavLink></li>
                             <li><NavLink to="/creategrievence" exact activeClassName="selected-item">Create Grievences</NavLink></li>
                             <li><NavLink to="/creategrievencelog" exact activeClassName="selected-item">Create Grievences Log</NavLink></li>

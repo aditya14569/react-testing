@@ -65,8 +65,8 @@ class Eligibility extends Component {
         elementType: "select",
         elementConfig: {
           options: [
-            { value: "available", displayValue: "available" },
-            { value: "need-to-order", displayValue: "need-to-order" }
+            { value: "Available", displayValue: "Available" },
+            { value: "Need To Order", displayValue: "Need To Order" }
           ]
         },
         value: "need-to-order",
@@ -100,7 +100,7 @@ class Eligibility extends Component {
       },
 
       grievance_description: {
-        elementType: "select",
+        elementType: "input",
         elementConfig: {
           type: "text",
           placeholder: "grievance description"
@@ -119,20 +119,7 @@ class Eligibility extends Component {
         //valid: true
       }
     },
-    attached_documents: {
-      elementType: "input",
-      elementConfig: {
-        type: "text",
-        placeholder: "attached_documents"
-      },
-      value: "",
-      validation: {
-        required: true
-        //isEmail: true
-      },
-      valid: false,
-      touched: false
-    },
+    
     // days_till_response: {
     //     elementType: 'input',
     //     elementConfig: {
@@ -167,20 +154,22 @@ class Eligibility extends Component {
       grievence_subject: formData.grievance_subject,
       time: formData.time,
       availability: formData.availability,
-      partsneeded: formData.partsneeded,
+      partsneeded: parseInt(formData.partsneeded,10),
       issue: formData.issue,
       quantity: formData.quantity,
       externalexpert: formData.externalexpert,
-      attached_documents: formData.attached_documents
+      subcategoryId: 1
+      //attached_documents: formData.attached_documents
     };
     axios
-      .post("https://jsonplaceholder.typicode.com/posts", data)
+      .post("https://sih-ecms-server.herokuapp.com/student/form/electricity", data)
       .then(response => {
         this.setState({ loading: false });
         //this.props.history.push('/');
       })
       .catch(error => {
         this.setState({ loading: false });
+        console.log(error);
       });
     this.setState({ loading: false });
   };

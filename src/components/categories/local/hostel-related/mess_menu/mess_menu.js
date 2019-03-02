@@ -44,9 +44,7 @@ class Eligibility extends Component {
                 value: '',
                 validation: {
                     required: true,
-                    minLength: 5,
-                    maxLength: 5,
-                    isNumeric: true
+                   
                 },
                 valid: false,
                 touched: false
@@ -81,7 +79,7 @@ class Eligibility extends Component {
           
 
             grievance_description: {
-                elementType: 'select',
+                elementType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: 'grievance description'

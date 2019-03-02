@@ -125,20 +125,7 @@ class Eligibility extends Component {
         //valid: true
       }
     },
-    attached_documents: {
-      elementType: "input",
-      elementConfig: {
-        type: "text",
-        placeholder: "attached_documents"
-      },
-      value: "",
-      validation: {
-        required: true
-        //isEmail: true
-      },
-      valid: false,
-      touched: false
-    },
+   
     // days_till_response: {
     //     elementType: 'input',
     //     elementConfig: {

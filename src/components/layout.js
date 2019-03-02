@@ -1,7 +1,7 @@
 import React from  'react';
 import Auxillary from '../hoc/Auxillary';
 import Sidebar from './sidebar/sidebar';
-import { Route , Switch} from 'react-router-dom';
+import { Route , Switch, Link} from 'react-router-dom';
 import Scholarship from './categories/aicte/scholarship/scholarship';
 import Grievences from '../container/grievences/grievences';
 import Creategrievence from '../container/creategrievence/creategrievence';
@@ -40,57 +40,151 @@ import Mess_staff from './categories/local/hostel-related/mess_staff/mess_staff'
 import Watersupply from './categories/local/hostel-related/watersupply/watersupply';
 import Front from '../components/front/front';
 import Wifi from './categories/local/hostel-related/wifi/wifi';
+import Buttonlogout from './UI/Button/buttonlogout';
 
 const layout = (props) => {
     console.log(localStorage.getItem("token"));
     return (
-        <Auxillary>
-            <Sidebar />
-            <div>
-                <Switch>
-                <Route path='/login' exact component={Front} />
-                <Route path="/" exact component={Grievences} /> 
-                <Route path="/closedgrievence" component={Closedgrievence} />
-                <Route path="/viewgrievence" component={Viewgrievence} />
-                <Route path="/creategrievence/scholarship/Counselling" component={Couselling} />
-                <Route path="/creategrievence/scholarship/Reimbursement" component={Reimbursement} />
-                <Route path="/creategrievence/scholarship/Portal" component={Portal} />
-                <Route path="/creategrievence/scholarship/other" component={Other} />
-                <Route path="/creategrievence/scholarship/Eligibilty" component={Eligibilty} />
-                <Route path="/creategrievence/scholarship" component={Scholarship} />
-                <Route path="/creategrievence/right_to_information/RTI-related" component={Rti} /> 
-                <Route path="/creategrievence/right_to_information" component={RightToInformation} />
-                <Route path="/creategrievence/complaints_vigilance/ragging" component={Ragging} />
-                <Route path="/creategrievence/complaints_vigilance/others" component={Others} />
-                <Route path="/creategrievence/complaints_vigilance/against_institute" component={Against_institute} />
-                <Route path="/creategrievence/complaints_vigilance/certificate" component={Certificate} />
-                <Route path="/creategrievence/complaints_vigilance/fee_payment" component={Fee_payment} />
-                <Route path="/creategrievence/complaints_vigilance/vigilance" component={Vigilance} />
-                <Route path="/creategrievence/facility/dispensary" component={Dispensary} />
-                <Route path="/creategrievence/facility/road_and_pathway" component={Road} />
-                <Route path="/creategrievence/facility/sports_infrastructure" component={Sports} />
-                <Route path="/creategrievence/facility/sports_material" component={Sports_material} />
-                <Route path="/creategrievence/facility/others" component={Otherss} />
-                <Route path="/creategrievence/facility" component={Facility} />
-                <Route path="/creategrievence/complaints_vigilance" component={ComplaintsToVigilance} />
-                <Route path="/creategrievence/hostel/mess_fee" component={Mess_fee} />
-                <Route path="/creategrievence/hostel/mess_food" component={Mess_food} />
-                <Route path="/creategrievence/hostel/mess_menu" component={Mess_menu} />
-                <Route path="/creategrievence/hostel/mess_staff" component={Mess_staff} />
-                <Route path="/creategrievence/hostel/watersupply" component={Watersupply} />
-                <Route path="/creategrievence/hostel/wifi" component={Wifi} />
-                <Route path="/creategrievence/hostel/hostelstaff" component={Hostelstaff} />
-                <Route path="/creategrievence/hostel/furniture" component={Furniture} />
-                <Route path="/creategrievence/hostel/electricity" component={Electricity} />
-                <Route path="/creategrievence/hostel/others" component={Othersss} />
-                <Route path="/creategrievence/hostel" component={Hostel} />
-                <Route path="/creategrievence" component={Creategrievence} />
-                <Route path="/creategrievencelog" component={Creategrievencelog} />
-                </Switch>
-            </div>
-            {/* <Scholarship /> */}
-        </Auxillary>
-    )
+      <Auxillary>
+        <Sidebar />
+        <div>
+          <Switch>
+            {/* <Route path='/login' exact component={Front} /> */}
+            <Route path="/grievence" exact component={Grievences} />
+            <Route path="/closedgrievence" component={Closedgrievence} />
+            <Route path="/viewgrievence" component={Viewgrievence} />
+            <Route
+              path="/creategrievence/scholarship/Counselling"
+              component={Couselling}
+            />
+            <Route
+              path="/creategrievence/scholarship/Reimbursement"
+              component={Reimbursement}
+            />
+            <Route
+              path="/creategrievence/scholarship/Portal"
+              component={Portal}
+            />
+            <Route
+              path="/creategrievence/scholarship/other"
+              component={Other}
+            />
+            <Route
+              path="/creategrievence/scholarship/Eligibilty"
+              component={Eligibilty}
+            />
+            <Route
+              path="/creategrievence/scholarship"
+              component={Scholarship}
+            />
+            <Route
+              path="/creategrievence/right_to_information/RTI-related"
+              component={Rti}
+            />
+            <Route
+              path="/creategrievence/right_to_information"
+              component={RightToInformation}
+            />
+            <Route
+              path="/creategrievence/complaints_vigilance/ragging"
+              component={Ragging}
+            />
+            <Route
+              path="/creategrievence/complaints_vigilance/others"
+              component={Others}
+            />
+            <Route
+              path="/creategrievence/complaints_vigilance/against_institute"
+              component={Against_institute}
+            />
+            <Route
+              path="/creategrievence/complaints_vigilance/certificate"
+              component={Certificate}
+            />
+            <Route
+              path="/creategrievence/complaints_vigilance/fee_payment"
+              component={Fee_payment}
+            />
+            <Route
+              path="/creategrievence/complaints_vigilance/vigilance"
+              component={Vigilance}
+            />
+            <Route
+              path="/creategrievence/facility/dispensary"
+              component={Dispensary}
+            />
+            <Route
+              path="/creategrievence/facility/road_and_pathway"
+              component={Road}
+            />
+            <Route
+              path="/creategrievence/facility/sports_infrastructure"
+              component={Sports}
+            />
+            <Route
+              path="/creategrievence/facility/sports_material"
+              component={Sports_material}
+            />
+            <Route
+              path="/creategrievence/facility/others"
+              component={Otherss}
+            />
+            <Route path="/creategrievence/facility" component={Facility} />
+            <Route
+              path="/creategrievence/complaints_vigilance"
+              component={ComplaintsToVigilance}
+            />
+            <Route
+              path="/creategrievence/hostel/mess_fee"
+              component={Mess_fee}
+            />
+            <Route
+              path="/creategrievence/hostel/mess_food"
+              component={Mess_food}
+            />
+            <Route
+              path="/creategrievence/hostel/mess_menu"
+              component={Mess_menu}
+            />
+            <Route
+              path="/creategrievence/hostel/mess_staff"
+              component={Mess_staff}
+            />
+            <Route
+              path="/creategrievence/hostel/watersupply"
+              component={Watersupply}
+            />
+            <Route path="/creategrievence/hostel/wifi" component={Wifi} />
+            <Route
+              path="/creategrievence/hostel/hostelstaff"
+              component={Hostelstaff}
+            />
+            <Route
+              path="/creategrievence/hostel/furniture"
+              component={Furniture}
+            />
+            <Route
+              path="/creategrievence/hostel/electricity"
+              component={Electricity}
+            />
+            <Route
+              path="/creategrievence/hostel/others"
+              component={Othersss}
+            />
+            <Route path="/creategrievence/hostel" component={Hostel} />
+            <Route path="/creategrievence" component={Creategrievence} />
+            <Route
+              path="/creategrievencelog"
+              component={Creategrievencelog}
+            />
+          </Switch>
+          <Link to="/login">
+            <Buttonlogout>Log Out</Buttonlogout>
+          </Link>
+        </div>
+        {/* <Scholarship /> */}
+      </Auxillary>
+    );
 };
 
 export default layout;

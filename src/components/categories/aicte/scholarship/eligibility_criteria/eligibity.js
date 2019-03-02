@@ -44,9 +44,7 @@ class Eligibility extends Component {
                 value: '',
                 validation: {
                     required: true,
-                    minLength: 5,
-                    maxLength: 5,
-                    isNumeric: true
+                   
                 },
                 valid: false,
                 touched: false
