@@ -78,18 +78,22 @@ class Eligibility extends Component {
                 touched: false
             },
             availability: {
-                elementType: 'input',
+                elementType: 'select',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'availability'
+                    options:[
+                   {value:'available',displayValue :'available'},
+                    { value: 'need-to-order', displayValue : 'need-to-order'}]
+                   
                 },
-                value: '',
-                validation: {
-                    required: true,
+                value: 'fastest',
+                valid:true,
+                validation:{}
+                // validation: {
+                //     required: true,
 
-                },
-                valid: false,
-                touched: false
+                
+                // valid: false,
+                // touched: false
             },
             externalexpert: {
                 elementType: 'input',
@@ -121,14 +125,11 @@ class Eligibility extends Component {
             },
 
             grievance_description: {
-                elementType: 'select',
+                elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'grievance description'
-                    /*options: [
-                        { value: 'fastest', displayValue: 'Fastest' },
-                        { value: 'cheapest', displayValue: 'Cheapest' }
-                    ]*/
+                    placeholder: 'grievance description',
+                   
                 },
                 value: '',
                 validation: {
