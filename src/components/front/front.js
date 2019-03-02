@@ -141,7 +141,7 @@ class Front extends Component {
                         touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
-                <Button className="" variant="success" disabled={!this.state.formIsValid}>Log In</Button>
+                <Button variant="success" disabled={!this.state.formIsValid}>Log In</Button>
             </form>
         );
         if (this.state.loading) {

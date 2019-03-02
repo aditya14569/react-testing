@@ -1,3 +1,20 @@
 .App {
+  padding: 70px;
   text-align: center;
+}
+.navbar{
+  margin-left: 63px;
+  background: #2b2c40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  color: cyan;
+  font-weight: 500;
+  font-size: 20px;
+  height:64px;
+}
+.brand{
+  display: flex;
+  margin: 5px;
 }

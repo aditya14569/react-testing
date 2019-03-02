@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from './components/layout';
 import Front from '../src/components/front/front';
+import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
@@ -45,7 +46,19 @@ class App extends Component {
      <BrowserRouter> 
      <div className="App">
         {/* <Front /> */}
-        <button >Log Out</button>
+        <div className='navbar fixed-top'>
+          <div className='brand'>
+            <img
+              alt=""
+              src="/logo.svg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+            {'Effective Complaint Management System'}
+          </div>
+          <Button variant="danger" size="sm" >Log Out</Button>
+        </div>
         <Layout />
       </div></BrowserRouter>
     // <Front />

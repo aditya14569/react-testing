@@ -1,46 +1,71 @@
 import React from 'react';
-import './sidebar.css';
+// import './sidebar.css';
+import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import Auxillary from '../../hoc/Auxillary';
-import {NavLink} from 'react-router-dom';
+import {NavLink,withRouter} from 'react-router-dom';
+const sbItem = {
+    margin: '40px',
+    border: '2px solid grey'
+  };
 const sidebar = (props) => {
     return (
         <Auxillary>
-            <section id="body" className="width">
-                <aside id="sidebar" className="column-left">
-
-                    <header>
-                        <h1><a href="#">Grievence Portal</a></h1>
-                    </header>
-
-                    <nav id="mainnav">
-                        <ul>
-                            <li><NavLink to="/" exact activeClassName="selected-item">Open Grievences</NavLink></li> 
-                            <li><NavLink to="/closedgrievence" exact activeClassName="selected-item">Closed Grievences</NavLink></li>
-                            <li><NavLink to="/creategrievence" exact activeClassName="selected-item">Create Grievences</NavLink></li>
-                            <li><NavLink to="/creategrievencelog" exact activeClassName="selected-item">Create Grievences Log</NavLink></li>
-                            <li><NavLink to="/viewgrievence" exact activeClassName="selected-item">View Grievance (with log)</NavLink></li>
-                        </ul>
-                    </nav>
-
-
-
-                </aside>
-                <section id="content" className="column-right">
-                    {/* <article>
-
-                    </article>
-
-                    <article class="expanded">
-
-                    </article> */}
-                </section>
-
-                <div className="clear"></div>
-
-            </section>
+            <SideNav
+                onSelect={(selected) => {
+                    const to = '/' + selected;
+                        props.history.push(to);
+                    
+                }}
+            >
+                <SideNav.Toggle />
+                <SideNav.Nav defaultSelected='#'>
+                    <NavItem eventKey="#">
+                        <NavIcon>
+                            <i className="fa fa-fw fa-envelope-open-o" style={{ fontSize: '1.75em' }} />
+                        </NavIcon>
+                        <NavText>
+                            Open Grievence
+                        </NavText>
+                    </NavItem>
+                    <NavItem eventKey="closedgrievence">
+                        <NavIcon>
+                            <i className="fa fa-fw fa-window-close-o" style={{ fontSize: '1.75em' }} />
+                        </NavIcon>
+                        <NavText>
+                            Closed Grievence
+                        </NavText>
+                    </NavItem>
+                    <NavItem eventKey="creategrievence">
+                        <NavIcon>
+                        <i class="fas fa-pen-square"></i>
+                            <i className="fa fa-fw fa-edit" style={{ fontSize: '1.75em' }} />
+                        </NavIcon>
+                        <NavText>
+                            CreateGrievence
+                        </NavText>
+                    </NavItem>
+                    <NavItem eventKey="creategrievencelog">
+                        <NavIcon>
+                            <i className="fa fa-fw fa-th-list" style={{ fontSize: '1.75em' }} />
+                        </NavIcon>
+                        <NavText>
+                            Create Grievence Log
+                        </NavText>
+                    </NavItem>
+                    <NavItem eventKey="viewgrievence">
+                        <NavIcon>
+                            <i className="fa fa-fw fa-list-alt" style={{ fontSize: '1.75em' }} />
+                        </NavIcon>
+                        <NavText>
+                            View Grievence Log
+                        </NavText>
+                    </NavItem>
+                </SideNav.Nav>
+            </SideNav>
         </Auxillary>    
 
     )
 };
 
-export default sidebar;
+export default withRouter(sidebar);
