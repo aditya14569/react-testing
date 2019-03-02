@@ -44,11 +44,12 @@ import Wifi from './categories/local/hostel-related/wifi/wifi';
 import Buttonlogout from './UI/Button/buttonlogout';
 import '../App.css';
 import './layout.css'
-const fixedNav = {
-  position: 'fixed'
-};
+// const fixedNav = {
+//   position: 'fixed'
+// };
 const layout = (props) => {
-    console.log(localStorage.getItem("token"));
+    if(!localStorage.getItem("token"))
+      props.history.push('./login');
     return (
       <Auxillary>
         <div className="App">
@@ -72,7 +73,7 @@ const layout = (props) => {
         
       </div>
         <div className='fixedSideNav'>
-        <Sidebar style={fixedNav} />
+        <Sidebar />
         </div>
         
         <div className='mainWindow'>
