@@ -1,6 +1,7 @@
 import React from  'react';
 import Auxillary from '../hoc/Auxillary';
 import Sidebar from './sidebar/sidebar';
+import Button from 'react-bootstrap/Button';
 import { Route , Switch, Link} from 'react-router-dom';
 import Scholarship from './categories/aicte/scholarship/scholarship';
 import Grievences from '../container/grievences/grievences';
@@ -41,13 +42,40 @@ import Watersupply from './categories/local/hostel-related/watersupply/watersupp
 import Front from '../components/front/front';
 import Wifi from './categories/local/hostel-related/wifi/wifi';
 import Buttonlogout from './UI/Button/buttonlogout';
-
+import '../App.css';
+import './layout.css'
+const fixedNav = {
+  position: 'fixed'
+};
 const layout = (props) => {
     console.log(localStorage.getItem("token"));
     return (
       <Auxillary>
-        <Sidebar />
-        <div>
+        <div className="App">
+        {/* <Front /> */}
+        <div className='navbar fixed-top'>
+          <div className='brand'>
+            <img
+              alt=""
+              src="/logo.svg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+            <div className='projectName'>
+              {'Effective Complaint Management System'}
+            </div>
+            
+          </div>
+          <Link to='/login'><Button variant="danger" size="sm" >Log Out</Button></Link>
+        </div>
+        
+      </div>
+        <div className='fixedSideNav'>
+        <Sidebar style={fixedNav} />
+        </div>
+        
+        <div className='mainWindow'>
           <Switch>
             {/* <Route path='/login' exact component={Front} /> */}
             <Route path="/grievence" exact component={Grievences} />
@@ -178,9 +206,9 @@ const layout = (props) => {
               component={Creategrievencelog}
             />
           </Switch>
-          <Link to="/login">
+          {/* <Link to="/login">
             <Buttonlogout>Log Out</Buttonlogout>
-          </Link>
+          </Link> */}
         </div>
         {/* <Scholarship /> */}
       </Auxillary>

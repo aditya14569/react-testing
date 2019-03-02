@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Auxillary from '../../hoc/Auxillary';
 import {Link} from 'react-router-dom';
+import './creategrievence.css'
+import Button from 'react-bootstrap/Button';
 class Creategrievence extends Component{
     state = {
         options : {
@@ -12,20 +14,18 @@ class Creategrievence extends Component{
         },
 
     }
-
+    
     render () 
     {
         return (
+            
             <Auxillary>
-                <p>Select a category:</p>
-                <ul>
+                <div className='h4'>Select a category :</div>
                         {Object.keys(this.state.options).map(str => {
                             let str1="/creategrievence/"+str;
                            return (
-                            <li><Link to={str1}>{str}</Link></li>
+                            <Link className='indvItems' to={str1}>{str}</Link>
                         )})}
-                </ul>
-                <div>inside create grievence</div>
             </Auxillary>
         )
     };

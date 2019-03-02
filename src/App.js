@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Layout from './components/layout';
 import Front from '../src/components/front/front';
-import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import Auxillary from '../src/hoc/Auxillary';
 import {BrowserRouter, Route, Switch, Redirect,Link} from 'react-router-dom';

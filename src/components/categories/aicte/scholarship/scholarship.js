@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Auxillary from '../../../../hoc/Auxillary';
 import { Link } from 'react-router-dom';
+import './scholarship.css'
 class Scholarship extends Component {
     state = {
         options: ["Counselling", "Eligibilty", "Portal", "Reimbursement", "other"]
@@ -11,19 +12,19 @@ class Scholarship extends Component {
         return (
 
             <Auxillary>
-                <h1>Scholarship</h1>
+                <div className='h3'>Scholarship</div>
 
                 {/* <Eligibility /> */}
                 <p>Select a sub-category:</p>
-                <ul>
+                {/* <ul> */}
                     {this.state.options.map(str => {
                         let str1="/creategrievence/scholarship/"+str;
                         return (
-
-                            <li><Link to={str1}>{str}</Link></li>
+                            <Link className='indvItems' to={str1}>{str}</Link>
+                            // <li><Link to={str1}>{str}</Link></li>
                         )
                     })}
-                </ul>
+                {/* </ul> */}
             </Auxillary>
         )
     };

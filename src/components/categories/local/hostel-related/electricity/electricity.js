@@ -149,6 +149,9 @@ class Eligibility extends Component {
       ].value;
     }
     const data = {
+      headers: {
+       "x-auth": localStorage.getItem("token")
+      },
       name: formData.name,
       grievance_description: formData.grievance_description,
       grievence_subject: formData.grievance_subject,
@@ -161,8 +164,15 @@ class Eligibility extends Component {
       subcategoryId: 1
       //attached_documents: formData.attached_documents
     };
+    console.log("----------------------------");
+    console.log(localStorage.getItem("token"));
+    console.log("----------------------------");
     axios
-      .post("https://sih-ecms-server.herokuapp.com/student/form/electricity", data)
+      .post("https://sih-ecms-server.herokuapp.com/student/form/electricity", data, {
+        headers: {
+        "x-auth": localStorage.getItem("token")
+        }
+        })
       .then(response => {
         this.setState({ loading: false });
         //this.props.history.push('/');
