@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
-import Button from '../UI/Button/Button';
+import Button from 'react-bootstrap/Button';
+// import Button from '../UI/Button/Button';
 import Spinner from '../UI/Spinner/Spinner';
+import './front.css';
 //import classes from './eligibility.css';
 import axios from 'axios';
 import Input from '../UI/Input/Input';
@@ -140,15 +141,18 @@ class Front extends Component {
                         touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
-                <Button btnType="Success" disabled={!this.state.formIsValid}>Log In</Button>
+                <Button className="" variant="success" disabled={!this.state.formIsValid}>Log In</Button>
             </form>
         );
         if (this.state.loading) {
             form = <Spinner />;
         }
         return (
-            <div className='ContactData'>
-                {form}
+            <div className='outerBox'>
+            <div className='innerBox ContactData'>
+            {form}
+            </div>
+                
             </div>
         );
     }
