@@ -1,25 +1,44 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './postclose.css'
-const post = (props) => {
+import Axios from 'axios';
+class Post extends Component {
+    clickescallateHandler() {
+        const url = 'https://sih-ecms-server.herokuapp.com/student/grievance/' + this.props.id;
+        if (this.props.closedBy == 'P' || this.props.closedBy == 'C')
+        {
+            Axios.patch(url, {
+                "status": 'A'
+            }, {
+                    headers: {
+                        "x-auth": localStorage.getItem("token")
+                    }
+                }
+            );
+        }
+        else
+            window.alert("cannot be escallated");
+    };
+    render() {
     return (
         <div className='anyCard'>
             <div className='oneClass'>
-                <div><span className='boldFont'>id: </span>{props.id}</div>
-                <div><span className='boldFont'>createdAt:</span> {props.createdAt}</div>
+                <div><span className='boldFont'>id: </span>{this.props.id}</div>
+                <div><span className='boldFont'>createdAt:</span> {this.props.createdAt}</div>
             </div>
             <div className='oneClass'>
-                <div><span className='boldFont'>isClosed:</span> {props.isClosed}</div>
-                <div><span className='boldFont'>updatedAt:</span> {props.updatedAt}</div>
+                <div><span className='boldFont'>isClosed:</span> {this.props.isClosed}</div>
+                <div><span className='boldFont'>updatedAt:</span> {this.props.updatedAt}</div>
             </div>
+            <button onClick={() => this.clickescallateHandler()}>Escallate</button>
             <div>
-            <span className='boldFont'>subject:</span> {props.subject}
+            <span className='boldFont'>subject:</span> {this.props.subject}
             </div>
             <div className='oneClass'>
-                <div><span className='boldFont'>timeTillEscalation:</span> {props.timeTillEscalation}</div>
-                <div><span className='boldFont'>status:</span> {props.status}</div>
+                <div><span className='boldFont'>timeTillEscalation:</span> {this.props.timeTillEscalation}</div>
+                <div><span className='boldFont'>status:</span> {this.props.status}</div>
             </div>
             <div className='twoClass'>
-                <div><span className='boldFont'>userId:</span> {props.userId}</div>
+                <div><span className='boldFont'>userId:</span> {this.props.userId}</div>
             </div>
             {/* <p>closedBy: {props.closedBy}</p>
             <p>createdAt: {props.createdAt}</p>
@@ -38,6 +57,7 @@ const post = (props) => {
             <p>updatedAt: {props.updatedAt}</p>
             <p>userId: {props.userId}</p> */}
         </div>
-    )
+    );
+        }
 }
-export default post;
+export default Post;
