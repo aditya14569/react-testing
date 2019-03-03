@@ -1,9 +1,9 @@
 import React from 'react';
 // import './sidebar.css';
-import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import Auxillary from '../../hoc/Auxillary';
-import {NavLink,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 const sbItem = {
     margin: '40px',
     border: '2px solid grey'

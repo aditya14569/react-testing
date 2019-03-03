@@ -196,6 +196,7 @@ class Eligibility extends Component {
         }
         axios.post('https://jsonplaceholder.typicode.com/posts', data)
             .then(response => {
+                window.alert("Grievance Created");
                 this.setState({ loading: false });
                 //this.props.history.push('/');
             })
@@ -284,6 +285,7 @@ class Eligibility extends Component {
         }
         return (
             <div className='ContactData'>
+                <p>Complaints-Vigilance->Fee Payment</p>
                 <h4>Please fill the form</h4>
                 {form}
             </div>

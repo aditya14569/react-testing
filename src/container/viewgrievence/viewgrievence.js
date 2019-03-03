@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
-//import classes from './eligibility.css';
 import axios from 'axios';
 import Input from '../../components/UI/Input/Input';
 import Post from './post/postlog';

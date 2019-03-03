@@ -39,9 +39,7 @@ import Mess_food from './categories/local/hostel-related/mess_food/mess_food';
 import Mess_menu from './categories/local/hostel-related/mess_menu/mess_menu';
 import Mess_staff from './categories/local/hostel-related/mess_staff/mess_staff';
 import Watersupply from './categories/local/hostel-related/watersupply/watersupply';
-import Front from '../components/front/front';
 import Wifi from './categories/local/hostel-related/wifi/wifi';
-import Buttonlogout from './UI/Button/buttonlogout';
 import '../App.css';
 import './layout.css'
 // const fixedNav = {

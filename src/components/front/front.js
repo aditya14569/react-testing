@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import Carousel from 'react-bootstrap/Button';
-import {withRouter} from 'react-router-dom';
-// import Button from '../UI/Button/Button';
 import Spinner from '../UI/Spinner/Spinner';
 import './front.css';
-//import classes from './eligibility.css';
 import axios from 'axios';
 import Input from '../UI/Input/Input';
 

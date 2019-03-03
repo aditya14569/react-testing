@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Layout from './components/layout';
 import Front from '../src/components/front/front';
-import axios from 'axios';
-import Auxillary from '../src/hoc/Auxillary';
-import {BrowserRouter, Route, Switch, Redirect,Link} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
