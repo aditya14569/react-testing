@@ -20,12 +20,15 @@ class Creategrievence extends Component{
         return (
             
             <Auxillary>
-                <div className='h4'>Select a category :</div>
-                        {Object.keys(this.state.options).map(str => {
-                            let str1="/creategrievence/"+str;
-                           return (
-                            <Link className='indvItems' to={str1}>{str}</Link>
-                        )})}
+                <div className="ContactData">
+                    <div className='h4'>Select a category :</div>
+                            {Object.keys(this.state.options).map(str => {
+                                let str1="/creategrievence/"+str;
+                            return (
+                                <Link className='indvItems' to={str1}>{str}</Link>
+                            )})}
+                </div>
+                
             </Auxillary>
         )
     };
