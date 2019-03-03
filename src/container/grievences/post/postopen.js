@@ -1,7 +1,7 @@
 import React from 'react';
 const post = (props) => {
     return (
-        <div>
+        <div onClick={props.clicked}>
             <p>closedBy: {props.closedBy}</p>
             <p>createdAt: {props.createdAt}</p>
             <p>id: {props.id}</p>

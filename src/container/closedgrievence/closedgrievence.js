@@ -4,7 +4,23 @@ import Post from './post/postclose';
 class Closedgrievence extends Component {
     state = {
         data: [],
+        datatwo: [],
         hasGot: false
+    }
+    clickHandler(id) {
+        console.log("logs");
+        const url = 'https://sih-ecms-server.herokuapp.com/student/grievancelog/' + id;
+        Axios.get(url, {
+            headers: {
+                "x-auth": localStorage.getItem("token")
+            }
+        })
+            .then(response => {
+                let data3 = [...response.data]
+                this.setState({ datatwo: data3, hasGot: true });
+                console.log("hey");
+                console.log(response);
+            });
     }
     render() {
         if (!this.state.hasGot) {
@@ -29,7 +45,8 @@ class Closedgrievence extends Component {
         }
         else {
             const p2 = this.state.data.map(data => {
-                return <Post closedBy={data["closedBy"]}
+                return <Post clicked={this.clickHandler.bind(this, data["id"])}
+                    closedBy={data["closedBy"]}
                     createdAt={data["createdAt"]}
                     id={data["id"]}
                     isClosed={data["isClosed"]}
@@ -42,7 +59,13 @@ class Closedgrievence extends Component {
                     // timeOF={data["timeOF"]}
                     timeTillEscalation={data["timeTillEscalation"]}
                     updatedAt={data["updatedAt"]}
-                    userId={data["uerId"]} />
+                    userId={data["uerId"]} 
+                    // createdAt: "2019-03-03T00:42:39.000Z"
+                    // log: "Please do need money urlink::::"
+                    // updatedAt: "2019-03-03T00:42:39.000Z"
+                    // userId: 101603356
+                    />
+
             })
             return (p2);
         }

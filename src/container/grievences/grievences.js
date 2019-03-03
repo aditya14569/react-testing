@@ -6,6 +6,15 @@ class Grievence extends Component{
         data : [],
         hasGot :false
     }
+    clickHandler (id) {
+        const url = 'https://sih-ecms-server.herokuapp.com/student/grievancelog/'+id;
+        Axios.get(url, {
+            headers: {
+                "x-auth": localStorage.getItem("token")
+            }
+        })
+        .then(response => console.log(response));
+    }
     render()
     {
         if(!this.state.hasGot)
@@ -33,7 +42,8 @@ class Grievence extends Component{
     else 
     {
         const p2 = this.state.data.map(data => {
-            return <Post closedBy={data["closedBy"]}
+            return <Post clicked={this.clickHandler.bind(this,data["id"])} 
+                closedBy={data["closedBy"]}
                 createdAt= {data["createdAt"]}
                 id= {data["id"]}
                 isClosed= {data["isClosed"]}

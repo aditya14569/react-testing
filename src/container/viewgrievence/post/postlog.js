@@ -1,5 +1,5 @@
 import React from 'react';
-import './postclose.css'
+import './postlog.css'
 const post = (props) => {
     return (
         <div className='anyCard'>
@@ -8,15 +8,11 @@ const post = (props) => {
                 <div><span className='boldFont'>createdAt:</span> {props.createdAt}</div>
             </div>
             <div className='oneClass'>
-                <div><span className='boldFont'>isClosed:</span> {props.isClosed}</div>
                 <div><span className='boldFont'>updatedAt:</span> {props.updatedAt}</div>
+                <div><span className='boldFont'>log:</span> {props.log}</div>
             </div>
             <div>
-            <span className='boldFont'>subject:</span> {props.subject}
-            </div>
-            <div className='oneClass'>
-                <div><span className='boldFont'>timeTillEscalation:</span> {props.timeTillEscalation}</div>
-                <div><span className='boldFont'>status:</span> {props.status}</div>
+            <span className='boldFont'>grievanceId:</span> {props.grievanceId}
             </div>
             <div className='twoClass'>
                 <div><span className='boldFont'>userId:</span> {props.userId}</div>
