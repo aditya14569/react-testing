@@ -117,7 +117,9 @@ class Eligibility extends Component {
         }
         let form = (
             <form onSubmit={this.orderHandler}>
-                {formElementsArray.map(formElement => (
+            {console.log(formElementsArray)}
+                {   
+                    formElementsArray.map(formElement => (
                     <Input
                         key={formElement.id}
                         elementType={formElement.config.elementType}
