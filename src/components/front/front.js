@@ -165,10 +165,12 @@ class Front extends Component {
                         <div className='projectName'>
                             {'Effective Complaint Management System'}
                         </div>
-            
+                        
                     </div>
                 </div>
+
                 <div className='outerBox'>
+                    
                     <div className='innerBox ContactData'>
                         {form}
                     </div>

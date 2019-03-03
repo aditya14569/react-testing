@@ -9,6 +9,13 @@ form{
     align-items: center;
     justify-content: center;
 }
+form button{
+    background: green;
+    height: 35px;
+    border:2px solid grey;
+    border-radius:5px; 
+    color: white;
+}
 form div{
     height: 100%;
     align-items: center;
@@ -63,4 +70,14 @@ input{
 .Invalid {
     border: 1px solid red;
     background-color: #FDA49A;
+}
+
+@media (max-width: 650px) {
+    form div select{
+        width: 55vw;
+    } 
+    input{
+        
+        width: 55vw;
+    }
 }

@@ -36,5 +36,8 @@
     .projectName{
         display: none;
     }
+    .mainWindow .ContactData{
+        width: 70vw;
+    }
 
 }
