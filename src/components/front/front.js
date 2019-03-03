@@ -66,6 +66,7 @@ class Front extends Component {
                     // console.log(auth);
                 })
                 .catch(error => {
+                    window.alert('Enter Valid Credentials');
                     this.setState({ loading: false });
                     window.alert('enter valid credentials')
                     console.log(error);
