@@ -19,8 +19,8 @@ const sidebar = (props) => {
                 }}
             >
                 <SideNav.Toggle />
-                <SideNav.Nav defaultSelected='#'>
-                    <NavItem eventKey="#">
+                <SideNav.Nav defaultSelected='grievence'>
+                    <NavItem eventKey="grievence">
                         <NavIcon>
                             <i className="fa fa-fw fa-envelope-open-o" style={{ fontSize: '1.75em' }} />
                         </NavIcon>

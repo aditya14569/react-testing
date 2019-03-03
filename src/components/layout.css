@@ -1,8 +1,24 @@
+#root{
+    background-image: url("../assets/images/backGround.jpg");
+    background-attachment: fixed;
+    background-position: center; 
+    min-height: 100vh;
+}
+
 .mainWindow{
     margin-left: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.mainWindow .ContactData{
+    background : #e7dada;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 30px;
 }
 .fixedSideNav{
     position: fixed;
@@ -19,6 +35,12 @@
 @media (max-width: 650px) {
     .projectName{
         display: none;
+    }
+    .mainWindow .ContactData{
+        width: 70vw;
+    }
+    #root{
+        background: rgb(244, 245, 243);
     }
 
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
+import Carousel from 'react-bootstrap/Button';
 import {withRouter} from 'react-router-dom';
 // import Button from '../UI/Button/Button';
 import Spinner from '../UI/Spinner/Spinner';
@@ -152,12 +152,31 @@ class Front extends Component {
             form = <Spinner />;
         }
         return (
-            <div className='outerBox'>
-            <div className='innerBox ContactData'>
-            {form}
+            <div>
+                <div className='navabar fixed-top'>
+                    <div className='brand'>
+                        <img
+                        alt=""
+                        src="/logo.svg"
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        />
+                        <div className='projectName'>
+                            {'Effective Complaint Management System'}
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div className='outerBox'>
+                    
+                    <div className='innerBox ContactData'>
+                        {form}
+                    </div>
+                </div>
             </div>
-                
-            </div>
+            // ../assets/images/C1.jpg
         );
     }
 }

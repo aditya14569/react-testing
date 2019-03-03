@@ -12,11 +12,12 @@ class Scholarship extends Component {
         return (
 
             <Auxillary>
+                <div className="ContactData">
                 <div className='h3'>Scholarship</div>
 
-                {/* <Eligibility /> */}
+            
                 <p>Select a sub-category:</p>
-                {/* <ul> */}
+                
                     {this.state.options.map(str => {
                         let str1="/creategrievence/scholarship/"+str;
                         return (
@@ -24,7 +25,7 @@ class Scholarship extends Component {
                             // <li><Link to={str1}>{str}</Link></li>
                         )
                     })}
-                {/* </ul> */}
+                </div>
             </Auxillary>
         )
     };
