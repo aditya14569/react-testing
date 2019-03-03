@@ -4,15 +4,15 @@ const post = (props) => {
     return (
         <div className='anyCard'>
             <div className='oneClass'>
-                <div><span className='boldFont'>id: </span>{props.id}</div>
+                <div><span className='boldFont'>grievanceId: </span>{props.grievanceId}</div>
                 <div><span className='boldFont'>createdAt:</span> {props.createdAt}</div>
             </div>
             <div className='oneClass'>
+                <div><span className='boldFont'>id:</span> {props.id}</div>
                 <div><span className='boldFont'>updatedAt:</span> {props.updatedAt}</div>
-                <div><span className='boldFont'>log:</span> {props.log}</div>
             </div>
             <div>
-            <span className='boldFont'>grievanceId:</span> {props.grievanceId}
+            <span className='boldFont'>log:</span> {props.log}
             </div>
             <div className='twoClass'>
                 <div><span className='boldFont'>userId:</span> {props.userId}</div>
