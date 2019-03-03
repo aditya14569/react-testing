@@ -20,7 +20,7 @@ class Post extends Component {
                 <div><span className='boldFont'>id: </span>{this.props.id}</div>
                 <div><span className='boldFont'>createdAt:</span> {this.props.createdAt}</div>
             </div>
-            <button onClick={()=> this.clickcloseHandler()}>Close</button>
+            
             <div className='oneClass'>
                 <div><span className='boldFont'>isClosed:</span> {this.props.isClosed}</div>
                 <div><span className='boldFont'>updatedAt:</span> {this.props.updatedAt}</div>
@@ -32,8 +32,9 @@ class Post extends Component {
                 <div><span className='boldFont'>timeTillEscalation:</span> {this.props.timeTillEscalation}</div>
                 <div><span className='boldFont'>status:</span> {this.props.status}</div>
             </div>
-            <div className='twoClass'>
+            <div className='oneClass'>
                 <div><span className='boldFont'>userId:</span> {this.props.userId}</div>
+                <button className='btn btn-danger btn-sm' onClick={()=> this.clickcloseHandler()}>Close</button>
             </div>
         </div>
     );
