@@ -6,6 +6,7 @@
     background: #f5f5f5;
 }
 .innerBox{
+    height: 35vh;
     background: #3c415e;
     padding: 20px;
     border-radius: 5px;

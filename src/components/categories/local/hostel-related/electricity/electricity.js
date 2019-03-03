@@ -69,7 +69,7 @@ class Eligibility extends Component {
             { value: "Need To Order", displayValue: "Need To Order" }
           ]
         },
-        value: "need-to-order",
+        value: "Need To Order",
         valid: true,
         validation: {}
       },
