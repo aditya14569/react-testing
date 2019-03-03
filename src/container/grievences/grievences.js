@@ -11,7 +11,7 @@ class Grievence extends Component{
         if(!this.state.hasGot)
         {
             console.log(localStorage.getItem("token"));
-            Axios.get('https://sih-ecms-server.herokuapp.com/student/grievances/true', {
+            Axios.get('https://sih-ecms-server.herokuapp.com/student/grievances/false', {
             headers: {
             "x-auth": localStorage.getItem("token")
             }

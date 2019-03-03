@@ -8,7 +8,7 @@ class Closedgrievence extends Component {
     }
     render() {
         if (!this.state.hasGot) {
-            Axios.get('https://sih-ecms-server.herokuapp.com/student/grievances/false', {
+            Axios.get('https://sih-ecms-server.herokuapp.com/student/grievances/true', {
                 headers: {
                     "x-auth": localStorage.getItem("token")
                 }
