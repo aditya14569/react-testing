@@ -39,5 +39,8 @@
     .mainWindow .ContactData{
         width: 70vw;
     }
+    #root{
+        background: rgb(244, 245, 243);
+    }
 
 }
