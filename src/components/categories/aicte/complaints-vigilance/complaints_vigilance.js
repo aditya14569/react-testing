@@ -12,18 +12,23 @@ class Complaints_vigilance extends Component {
         return (
 
             <Auxillary>
+                <div className="ContactData">
                 <div className='h3'>Complaints vigilance</div>
 
-                {/* <Eligibility /> */}
-                <p>Select a sub-category:</p>
-                
-                    {this.state.options.map(str => {
-                        let str1 = "/creategrievence/complaints_vigilance/" + str;
-                        return (
+                    {/* <Eligibility /> */}
+                    <p>Select a sub-category:</p>
 
-                            <Link to={str1} className='indvItems'>{str}</Link>
-                        )
-                    })}
+                        {this.state.options.map(str => {
+                            let str1 = "/creategrievence/complaints_vigilance/" + str;
+                            return (
+
+                                <Link to={str1} className='indvItems'>{str}</Link>
+                            )
+                        })}
+
+
+                </div>
+                
                 
             </Auxillary>
         )

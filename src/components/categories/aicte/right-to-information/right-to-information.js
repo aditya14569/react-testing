@@ -12,9 +12,8 @@ class Right_to_information extends Component {
         return (
 
             <Auxillary>
+                <div className="ContactData">
                 <div className='h3'>Right To Information</div>
-
-                {/* <Eligibility /> */}
                 <p>Select a sub-category:</p>
                     {this.state.options.map(str => {
                         let str1 = "/creategrievence/right_to_information/" + str;
@@ -23,6 +22,9 @@ class Right_to_information extends Component {
                             <Link to={str1} className='indvItems'>{str}</Link>
                         )
                     })}
+
+                </div>
+                
             </Auxillary>
         )
     };

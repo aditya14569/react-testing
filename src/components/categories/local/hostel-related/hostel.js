@@ -12,6 +12,7 @@ class Scholarship extends Component {
         return (
 
             <Auxillary>
+                <div className="ContactData">
                 <div className='h3'>Hostel</div>
 
                 {/* <Eligibility /> */}
@@ -24,7 +25,7 @@ class Scholarship extends Component {
                             <Link to={str1} className='indvItems'>{str}</Link>
                         )
                     })}
-
+                </div>
             </Auxillary>
         )
     };
