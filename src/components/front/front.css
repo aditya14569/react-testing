@@ -8,6 +8,11 @@
     background-position: center; 
     
 }
+@media (max-width: 650px) {
+    .outerBox{
+        background: rgb(244, 245, 243);
+    }
+}
 .innerBox{
     height: 250px;
     background: #3c415e;

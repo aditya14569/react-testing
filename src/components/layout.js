@@ -40,6 +40,7 @@ import Mess_menu from './categories/local/hostel-related/mess_menu/mess_menu';
 import Mess_staff from './categories/local/hostel-related/mess_staff/mess_staff';
 import Watersupply from './categories/local/hostel-related/watersupply/watersupply';
 import Wifi from './categories/local/hostel-related/wifi/wifi';
+import logo from '../assets/images/logo.png'
 import '../App.css';
 import './layout.css'
 // const fixedNav = {
@@ -56,8 +57,8 @@ const layout = (props) => {
           <div className='brand'>
             <img
               alt=""
-              src="/logo.svg"
-              width="30"
+              src={logo}
+              // width="30"
               height="30"
               className="d-inline-block align-top"
             />
