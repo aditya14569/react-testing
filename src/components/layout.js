@@ -54,7 +54,8 @@ const layout = (props) => {
         <div className="App">
         {/* <Front /> */}
         <div className='navbar fixed-top'>
-          <div className='brand'>
+        <a href="/grievence" className='brandA'>
+        <div className='brand' >
             <img
               alt=""
               src={logo}
@@ -67,6 +68,8 @@ const layout = (props) => {
             </div>
             
           </div>
+        </a>
+          
           <Link to='/login'><Button variant="danger" size="sm" >Log Out</Button></Link>
         </div>
         
